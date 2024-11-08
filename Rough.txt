@@ -1,0 +1,26 @@
+1) npm init --
+2) install bundler (parcel)
+3)
+4)
+5)
+6)
+7)
+8)
+9)
+10)
+
+
+=> first project 
+-> food ordering app (like swiggy and zomato)
+
+-planning and overview
+. layout
+.navbar
+.logo
+.buttons (HOME ABOUT CART...)
+.body
+.search bar
+.cards and items with image title description and rating
+.footer
+.copyright 
+.social links
