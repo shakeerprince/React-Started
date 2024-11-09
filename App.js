@@ -43,13 +43,14 @@ import ReactDOM from "react-dom/client";
 
 
  const RestaurantCard = (props)=>{
+  const {resName, cuisine} = props
+
   return(
     <div className="res-card" style={{ background: "#f0f0f0"}}>
     <img 
     className="res-logo"
     alt="res-logo"
-    src="http://///////////////"
-    />
+    src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/b374f789191669e20eb97a17f01bf23f"/>
       <h3>{props.resName}</h3>
       <h4>{props.cuisine}</h4>
       <h4>4.4 stars</h4>
@@ -66,7 +67,23 @@ import ReactDOM from "react-dom/client";
         <div className="res-container">
         <RestaurantCard resName ="Meghana Foods" cuisine="Biryani, North Indian Asian resRating"/>
         <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
-       
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
+        <RestaurantCard resName ="KFC" cuisine="Chicken, Fast Food"/>
         
         </div>
       </div>
