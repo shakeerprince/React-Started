@@ -24,3 +24,34 @@
 .footer
 .copyright 
 .social links
+
+
+
+/**
+ * Header
+ * -Logo
+ * -Nav Items
+ *Body 
+ * -search
+ * -RestaurantContainer
+ * -RestaurantCard
+ * -img
+ * -name of res, star rating, cuisine, delivery  time
+ *Footer
+ * -copyright
+ * -Links
+ * -Address
+ * -Contact
+ * Body
+ * Footer
+ */
+
+
+
+https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/cab874d5-c7ed-4122-9eb9-935992f4bcee_362596.JPG
+
+https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/0ea1daf5-b64e-43d2-80db-b460ed92e05c_11091.jpg
+
+
+
+https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/
