@@ -1,3 +1,4 @@
+import {CDN_URL} from '../../utils/constant'
 const RestaurantCard = (props)=>{
     const {resData} = props;
   
@@ -16,7 +17,7 @@ const RestaurantCard = (props)=>{
       <img 
       className="res-logo"
       alt="res-logo"
-      src={ CDN_URL + cloudinaryImageId} 
+      src={ CDN_URL+cloudinaryImageId } 
        />
         <h3>{name}</h3>
         <h4>{cuisines.join(", ")}</h4>
