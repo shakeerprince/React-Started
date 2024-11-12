@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
-import RestaurantCard from "./components/RestaurantCart";
+import RestaurantCart from "./components/RestaurantCart";
 import Body from "./components/Body";
 
 

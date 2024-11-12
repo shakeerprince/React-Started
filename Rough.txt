@@ -72,4 +72,21 @@ fetch('https://api.example.com/data')
 # React Hooks 
  (Normal Js functions )
  - useState()  - superPowerful state Variable in React
- - useEffect() -  
+ - useEffect() - 
+
+
+
+-> fetch data from any website 
+ 
+useEffect(()=>{
+  fetchData()
+ }, [])
+
+ const fetchData = async()=>{
+  const data = await fetch('')
+
+  const json = await data.json()
+
+  console.log(json);
+  
+ }
