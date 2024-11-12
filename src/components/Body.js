@@ -1,40 +1,14 @@
-import RestaurantCard from "./RestaurantCart";
-import resList from "../../utils/mockData";
+import RestaurantCart from "./RestaurantCart";
+import resList from "../../utils/mockData";   
+import { useState } from "react";
 
-const Body = ()=>{
-  let ListOfRestaurants = [
-    {
-      type: "restaurant",
-      data: {
-        id: "744531",
-        name: "KFC",
-        uuid: "87727dbd-7f2b-4857-9763-359624165845",
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        costForTwo: 40000,
-        deliveryTime: 45,
-        avgRating: "3.8",
-       
-      
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        id: "74453",
-        name: "Domino's Pizza",
-        uuid: "87727dbd-7f2b-4857-9763-359624165845",
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        costForTwo: 40000,
-        deliveryTime: 45,
-        avgRating: "4.0",
-       
-      
-      },
-    },
 
-  ]
+const Body = ()=>{ 
+
+  const [ListOfRestaurants, setListOfRestaurants] = useState([resList])
+
+  
+  
     return(
       <div className="body">
         <div className="filter">

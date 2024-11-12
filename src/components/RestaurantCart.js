@@ -1,5 +1,5 @@
 import {CDN_URL} from '../../utils/constant'
-const RestaurantCard = (props)=>{
+const RestaurantCart = (props)=>{
     const {resData} = props;
   
     const {
@@ -29,4 +29,4 @@ const RestaurantCard = (props)=>{
    }
 
 
-export default RestaurantCard;
+export default RestaurantCart;

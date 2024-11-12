@@ -62,4 +62,14 @@ https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_32
 
 https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/schjsfazzjcaaywwuap7
 
-https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ixdhdmfecmuei3lufgv0
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+  
+  
+  
+# React Hooks 
+ (Normal Js functions )
+ - useState()  - superPowerful state Variable in React
+ - useEffect() -  
