@@ -62,3 +62,8 @@
     height: 400px;
     background-color: #f0f0f0;
 }
+
+
+.filter{
+    display: flex;
+}

@@ -6,6 +6,10 @@ const Body = ()=>{
 
   const [ListOfRestaurants, setListOfRestaurants] = useState([])
 
+  const [filteredRestaurant, setFilteredRestaurant] = useState([])
+
+  const [searchText, setSearchText] = useState([])
+
  useEffect(()=>{
   fetchData()
  }, [])
@@ -18,6 +22,8 @@ const Body = ()=>{
   console.log(json);
   //optional Chaining 
   setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards)
+  setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
+  
   
  }
 
@@ -32,6 +38,23 @@ const Body = ()=>{
     ) : (
       <div className="body">
         <div className="filter">
+          <div className="search">
+            <input type="text" className="search-box" value={searchText}
+            onChange={(e)=>{
+              setSearchText(e.target.value)
+            }}
+            />
+              <button
+              onClick={()=>{
+                //Filter th Restaurant cards and update the UI
+                //searchText
+                  const filteredRestaurant = ListOfRestaurants.filter(
+                   (res) => res.data.name.toLowerCase().includes(searchText.toLowerCase())
+                  );
+                    setSearchText(filteredRestaurant)
+              }}
+              >Search</button>
+          </div>
           <button className="filter-btn"  
           onClick={()=>{
             const filteredList = ListOfRestaurants.filter(
@@ -41,7 +64,7 @@ const Body = ()=>{
           >Top Rated Restaurants</button>
         </div>
           <div className="res-container">
-          {ListOfRestaurants.map((restaurant)=> (
+          {filteredRestaurant.map((restaurant)=> (
             <RestaurantCart key={restaurant.data.id} resData={restaurant} />
           ))}
           </div>
