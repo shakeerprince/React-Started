@@ -1,10 +1,12 @@
 import RestaurantCart from "./RestaurantCart";  
 import { useState, useEffect} from "react";
+import React from "react";
+import Shimmer from "./Shimmer";
 
 
 const Body = ()=>{ 
 
-  const [ListOfRestaurants, setListOfRestaurants] = useState([])
+  const [ListOfRestaurants, setListOfRestaurants] = useState([resList])
 
   const [filteredRestaurant, setFilteredRestaurant] = useState([])
 
@@ -21,8 +23,8 @@ const Body = ()=>{
 
   console.log(json);
   //optional Chaining 
-  setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards)
-  setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
+  setListOfRestaurants(json?.data?.cards[2]?.card?.card)
+  setFilteredRestaurant(json?.data?.cards[2]?.card?.card)
   
   
  }
