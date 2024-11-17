@@ -5,3 +5,5 @@ const Shimmer = ()=>{
         <div className="shimmer-card">Card</div>
     </div>
 }
+
+export default Shimmer;
