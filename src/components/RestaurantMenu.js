@@ -22,6 +22,8 @@ const RestaurantMenu = ()=>{
 
         if(resInfo === null) return <Shimmer />
 
+        const {itemCards} = 
+          resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
     return(
         <div className="menu">
@@ -29,9 +31,13 @@ const RestaurantMenu = ()=>{
             <p>{cuisines.join(', ')} - {costForTwoMessage}</p>
             <h2>Menu</h2>
             <ul>
-                <li>Biryani</li>
-                <li>Burgers</li>
-                <li>Diet Coke</li>
+
+                {itemCards.map((item)=>{
+                    <li>{item.card.info.name} - {" "}
+                    {item.card.info.price/100 || item.card.info.card.defaultPrice}</li>
+                })}
+               
+                
             </ul>
         </div>
     )
