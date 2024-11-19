@@ -10,6 +10,13 @@ const RestaurantMenu = ()=>{
         fetchMenu()
     },[])
 
+   /**
+    * -Custom Hooks
+    *  ->const resInfo = useRestaurantMenu()
+    * 
+    */
+ 
+
     const fetchMenu = async ()=>{
         const data = await fetch('  ')
         const json = data.json();
