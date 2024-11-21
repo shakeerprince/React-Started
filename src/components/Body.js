@@ -1,4 +1,4 @@
-import RestaurantCart from "./RestaurantCart";  
+import RestaurantCart, {withPromotedLabel} from "./RestaurantCart";  
 import { useState, useEffect} from "react";
 import React from "react";
 import Shimmer from "./Shimmer";
@@ -10,19 +10,21 @@ const Body = ()=>{
 
   const [filteredRestaurant, setFilteredRestaurant] = useState([])
 
-  const [searchText, setSearchText] = useState([])
+  const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCart)
 
  useEffect(()=>{
   fetchData()
  }, [])
 
  const fetchData = async()=>{
-  const data = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=17.37240&lng=78.43780')
+  const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
 
   const json = await data.json()
 
   console.log(json);
-  //optional Chaining 
+   //optional Chaining 
   setListOfRestaurants(json?.data?.cards[2]?.card?.card)
   setFilteredRestaurant(json?.data?.cards[2]?.card?.card)
   
@@ -68,7 +70,19 @@ const Body = ()=>{
         </div>
           <div className="flex flex-wrap rounded-lg ">
           {filteredRestaurant.map((restaurant)=> (
-            <RestaurantCart key={restaurant.data.id} resData={restaurant} />
+            <Link
+             key={restaurant.data.id} 
+             to={"/restaurants/" + restaurant.data.id}
+             >
+
+              {restaurant.data.promoted ? (
+                <RestaurantCardPromoted resData={restaurant} />
+
+              ) : (
+                <RestaurantCart resData={restaurant} />
+              )}
+
+             </Link>
           ))}
           </div>
       </div>
